@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <main class="container">
+    <header>
+      <h1 class="title">TIC<span class="accent">·</span>TAC<span class="accent">·</span>TOE</h1>
+      <p class="subtitle">TWO PLAYER · CLASSIC</p>
+    </header>
+
+    <div class="scoreboard">
+      <div class="score-card" id="score-x">
+        <span class="player-symbol x-sym">X</span>
+        <span class="player-label">PLAYER X</span>
+        <span class="player-score" id="score-x-val">0</span>
+      </div>
+      <div class="score-divider">
+        <span class="draws-label">DRAWS</span>
+        <span class="draws-score" id="score-draw">0</span>
+      </div>
+      <div class="score-card" id="score-o">
+        <span class="player-symbol o-sym">O</span>
+        <span class="player-label">PLAYER O</span>
+        <span class="player-score" id="score-o-val">0</span>
+      </div>
+    </div>
+
+    <div class="turn-banner" id="turn-banner">
+      <span id="turn-text">PLAYER <strong>X</strong>'s TURN</span>
+    </div>
+
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="reset-btn">NEW ROUND</button>
+      <button class="btn btn-ghost" id="clear-btn">CLEAR SCORES</button>
+    </div>
+  </main>
+
+  <!-- Win overlay -->
+  <div class="overlay hidden" id="overlay">
+    <div class="overlay-box">
+      <p class="overlay-sub" id="overlay-sub">WINNER</p>
+      <h2 class="overlay-title" id="overlay-title">PLAYER X</h2>
+      <button class="btn" id="overlay-btn">PLAY AGAIN</button>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
